@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #2980b9, #2575fc);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        .logout-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+        }
+
+        .logout-container h1 {
+            font-size: 28px;
+            color: #2980b9;
+            margin-bottom: 20px;
+        }
+
+        .logout-container p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .logout-container .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .logout-container .btn:hover {
+            background-color: #2575fc;
+        }
+
+        .logout-container .home-btn {
+            background-color: #6c757d;
+        }
+
+        .logout-container .home-btn:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="logout-container">
+        <h1>Logout Successful</h1>
+        <p>You have been logged out. Thank you for visiting!</p>
+        <a href="{% url 'login' %}" class="btn">Login Again</a>
+        <a href="{% url 'home' %}" class="btn home-btn">Go to Home</a>
+    </div>
+</body>
+</html>

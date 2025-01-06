@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Expense Tracker</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #2980b9, #2575fc);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .landing-container {
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+
+        .landing-container h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .landing-container p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .landing-container .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .landing-container .buttons a {
+            text-decoration: none;
+            background: #2980b9;
+            color: white;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .landing-container .buttons a:hover {
+            background: #2575fc;
+        }
+
+        .landing-container .buttons .login {
+            background: #16a085;
+        }
+
+        .landing-container .buttons .login:hover {
+            background: #1abc9c;
+        }
+
+        .landing-container .buttons .signup {
+            background: #e74c3c;
+        }
+
+        .landing-container .buttons .signup:hover {
+            background: #c0392b;
+        }
+
+        .landing-container footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .landing-container footer a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        .landing-container footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-container">
+        <h1>Welcome to Expense Tracker</h1>
+        <p>Your personal tool to manage your finances and track your spending. Start today and take control of your money!</p>
+        
+        <div class="buttons">
+            <a href="{% url 'login' %}" class="login">Login</a>
+            <a href="{% url 'signup' %}" class="signup">Sign Up</a>
+        </div>
+
+        <footer>
+            <p>Already have an account? <a href="{% url 'login' %}">Login here</a></p>
+        </footer>
+    </div>
+</body>
+</html>
